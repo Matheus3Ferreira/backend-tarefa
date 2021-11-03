@@ -18,10 +18,10 @@ const config:any = {
        "src/entity/*"
     ],
     "migrations": [
-       "src/migration/*.ts"
+       "src/migration/**/*.ts"
     ],
     "subscribers": [
-       "src/subscriber/*.ts"
+       "src/subscriber/**/*.ts"
     ],
     "cli": {
        "entitiesDir": "src/entity",
