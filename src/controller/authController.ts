@@ -8,12 +8,12 @@ const generateToken = (params = {}) => jwt.sign(params, secret, {expiresIn: 9864
 
 export const authUser = async(request: Request, response: Response) => {
     
-    const {userName, password} = request.body;
+    const {username, password} = request.body;
     
-    if(!userName) return;
+    if(!username) return;
     if(!password) return;
     
-    const user = await getRepository(User).findOne({where: {userName, password}});
+    const user = await getRepository(User).findOne({where: {username, password}});
     if(!user)
         return response.status(400).json({status:400, msg: "Usuário não encontrado"})
 
