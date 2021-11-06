@@ -3,12 +3,14 @@ import { Tasks } from '../entity/Tasks';
 import { Request, Response } from "express";
  
 export const getTasks = async(request: Request, response: Response) => {
-    const tasks = await getRepository(Tasks).find();
+    const userId = (request as any).userId
+    const tasks = await getRepository(Tasks).find({where: {userId}});
     return response.json(tasks);
 };
 
 export const saveTasks = async(request: Request, response: Response) => {
-    const task = await getRepository(Tasks).save(request.body)
+    const userId = (request as any).userId
+    const task = await getRepository(Tasks).save({...request.body, userId})
     return response.json(task);
 };
 

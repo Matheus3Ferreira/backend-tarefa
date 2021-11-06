@@ -2,12 +2,6 @@ import { getRepository } from "typeorm";
 import { User } from '../entity/User';
 import { Request, Response } from "express";
 
-export const getOneUser = async(request: Request, response: Response) => {
-    const {id} = request.params
-    const user = await getRepository(User).findOne(id)
-    return response.json(user);
-};
-
 export const updateUser = async(request: Request, response: Response) => {
     const {id} = request.params
     const user = await getRepository(User).update(id, request.body)
