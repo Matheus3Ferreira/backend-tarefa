@@ -11,6 +11,8 @@ import { getOneUser } from './controller/UserController';
 
 const routes = Router()
 
+
+
 routes.post('/auth', authUser)
 routes.post('/auth/create', saveUser)
 routes.get('/mobile', getOneUser)
