@@ -14,12 +14,6 @@ const routes = Router()
 routes.post('/auth', authUser)
 routes.post('/auth/create', saveUser)
 
-routes.get('/mobile', getOneTask)
-routes.post('/mobile', saveTasks)
-routes.get('/mobile/:id', getOneTask)
-routes.put('/mobile/:id', updateTask)
-routes.delete('/mobile/:id', deleteTask)
-
 routes.use(tokenValidator)
 
 routes.get('/user', getOneUser)
