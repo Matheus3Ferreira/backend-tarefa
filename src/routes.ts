@@ -13,6 +13,11 @@ const routes = Router()
 
 routes.post('/auth', authUser)
 routes.post('/auth/create', saveUser)
+routes.get('/mobile', getOneUser)
+routes.post('/mobile', saveTasks)
+routes.get('/mobile/:id', getOneTask)
+routes.put('/mobile/:id', updateTask)
+routes.delete('/mobile/:id', deleteTask)
 
 routes.use(tokenValidator)
 
@@ -23,7 +28,5 @@ routes.post('/tasks', saveTasks)
 routes.put('/tasks/:id', updateTask)
 routes.delete('/tasks/:id', deleteTask)
 routes.patch('/tasks/:id', finishedTask)
-
-
 
 export default routes
