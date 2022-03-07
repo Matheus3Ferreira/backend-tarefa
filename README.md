@@ -1,4 +1,4 @@
-# Awesome Project Build with TypeORM
+# Project made for UNIP (Teacher: https://github.com/Joseffe10)
 
 This is a API made for a University little project made with Andrei.
 
